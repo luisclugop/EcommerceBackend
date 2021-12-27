@@ -29,9 +29,6 @@ class Contenedor {
         } else {
             return error;
         }
-
-        // condicional ternaria
-        // return producto ? producto : error
     }
 
     insert(objeto) {
@@ -42,11 +39,6 @@ class Contenedor {
 
     update(id, objeto) {
         const index = this.list.findIndex( (objetoActualizar) => objetoActualizar.id == id)
-        // objeto.id = this.list[index].id
-        // this.list[index] = objeto
-
-        // return objeto;
-
         if (index != -1) {
             objeto.id = this.list[index].id
             this.list[index] = objeto
@@ -59,10 +51,6 @@ class Contenedor {
 
     delete(id) {
         const indexDelete = this.list.findIndex( (objetoEliminar) => objetoEliminar.id == id)
-        // this.list.splice(indexDelete, 1);
-
-        // return this.list;
-
         if (indexDelete != -1) {
             this.list.splice(indexDelete, 1);
 

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto Ecommerce Backend" />
+    <meta name="description" content="Ecommerce en Linea" />
+    <meta name="author" content="Luis Carlos Lugo" />
+    <meta
+      name="copyright"
+      content="Copyright owner Luis Carlos Lugo"
+    />
+    <meta name="keywords" content="Ecommerce, Tienda en Linea" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Titulo -->
+    <title>Proyecto Ecommerce Backend</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+</head>
+<body>
+
+  <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="/">Ecommerce Backend</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/api/productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/api/carrito">Carrito</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  <!-- Menu -->
+
+    <div class="introSection text-center">
+      <div class="container p-3">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+            <div class="container-fluid introSlide introSlideLeft">
+              <div class="introSlideTittle">
+                <div class="tittle">
+                  <h5 class="subtittle">Top Productos</h5>
+                  <h2>Top Colección</h2>
+                  <a href="#">
+                    <button class="button-13" role="button">Ver Productos</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-12">
+                <div class="container-fluid introSlide introSlideRight">
+                  <div class="tittle">
+                    <h5 class="subtittle">Lo mas Nuevo...</h5>
+                    <h4>40% descuento</h4>
+                    <a href="#">
+                      <button class="button-13" role="button">Ver lo mas nuevo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-12">
+                <div class="container-fluid introSlide introSlideRight2">
+                  <div class="tittle">
+                    <h5 class="subtittle">Lo mas Nuevo...</h5>
+                    <h4>Top Colección</h4>
+                    <a href="#">
+                      <button class="button-13" role="button">Ver lo mas nuevo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2 class="tittlePage">Productos top</h2>
+            
+            <div class="owl-carousel owl-theme">
+              <!-- cards -->
+              <div class="cardProductos">
+                <div class="card">
+                  <img class="card-img-top" src="./img/furnitures/furniture-background-left.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="cardSubtittle">Muebles</p>
+                    <h5 class="cardTittle">Mueble Cocina Artesanal Madera</h5>
+                    <p class="cardPrice">$100.00 MXN</p>
+                    <a href="#">
+                      <button class="button-14" role="button">Ver Producto</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <!-- cards -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod">
+        <h1>WEBSOCKET <strong id="username"></strong></h1>
+
+        <h4>Ingresa un Producto</h4>
+        <form id="formProductos" method="post">
+            <label for="producto">Nombre Producto:</label><br>
+            <input type="text" id="producto" name="producto" placeholder="Texto:"><br>
+            <label for="price">Precio:</label><br>
+            <input type="number" id="price" name="price" placeholder="Precio:"><br>
+            <label for="thumbnail">Link Imagen:</label><br>
+            <input type="text" id="thumbnail" name="thumbnail" placeholder="Link Imagen:"><br><br>
+            <button type="submit">Agregar Productos</button>
+        </form><br>
+
+        <h4>Productos:</h4>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+              </tr>
+            </thead>
+            <tbody class="productos" id="productos">
+            </tbody>
+          </table>
+    </div>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script>
+      $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  items:1,
+                  nav:true
+              },
+              350:{
+                  items:2,
+                  nav:true
+              },
+              700:{
+                  items:3,
+                  nav:false
+              },
+              992:{
+                  items:5,
+                  nav:true,
+                  loop:false
+              }
+          }
+      })
+    </script>
+</body>
+</html>
