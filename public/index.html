@@ -139,19 +139,66 @@
             <input type="text" id="thumbnail" name="thumbnail" placeholder="Link Imagen:"><br><br>
             <button type="submit">Agregar Productos</button>
         </form><br>
-
-        <h4>Productos:</h4>
-        <table class="table">
+        
+        <!-- <table class="table table-borderless table-head-custom table-vertical-center">
             <thead>
               <tr>
-                <th scope="col">Producto</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Imagen</th>
+                <th class="p-0 w-50px">ID</th>
+                <th class="p-0 w-50px">Imagen</th>
+                <th class="p-0 min-w-200px">Producto</th>
+                <th class="p-0 min-w-100px">Precio</th>
+                <th class="p-0 min-w-100px">Timestamp</th>
+                <th class="p-0 min-w-200px">Descripcion</th>
+                <th class="p-0 min-w-100px">Codigo</th>
+                <th class="p-0 w-50px">stock</th>
               </tr>
             </thead>
             <tbody class="productos" id="productos">
             </tbody>
-          </table>
+        </table> -->
+    </div>
+
+    <div class="container-fluid tableProductos">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="container-fluid tablaProd m-2">
+          <div class="card cardTableProductos">
+            <div class="card-header">
+              <h3 class="card-title m-2">
+                <span class="card-label font-weight-bold font-size-h4 text-dark-75">Productos Disponibles</span>
+              </h3>
+              <div class="card-toolbar mt-1">
+                <a href="#">
+                  <button class="button-14" role="button">Ver Productos</button>
+                </a>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <div class="table-responsive">
+                <table class="table table-borderless table-head-custom table-vertical-center">
+                  <thead>
+                    <tr>
+                      <th class="p-0 w-50px">ID</th>
+                      <th class="p-0 w-50px">Imagen</th>
+                      <th class="p-0 min-w-200px">Producto</th>
+                      <th class="p-0 min-w-100px">Precio</th>
+                      <th class="p-0 min-w-100px">Timestamp</th>
+                      <th class="p-0 min-w-200px">Descripcion</th>
+                      <th class="p-0 min-w-100px">Codigo</th>
+                      <th class="p-0 w-50px">stock</th>
+                      <th class="p-0 w-50px">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody class="productos" id="productos">
+                  </tbody>
+              </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
     </div>
     
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->

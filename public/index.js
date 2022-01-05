@@ -23,10 +23,23 @@ function render(){
     $("#productos").html("")
     for(let item of productos){
         $("#productos").prepend(`
-            <tr>
-                <td><strong>${item.producto}</strong></td>
-                <td><strong>${item.price}</strong></td>
+            <tr class="text-center">
+                <td><strong>${item.id}</strong></td>
                 <td><img src=${item.thumbnail} style="width: 50px; height: auto;"></img></td>
+                <td>${item.producto}</td>
+                <td>$${item.price}</td>
+                <td>${item.timestamp}</td>
+                <td>${item.descripcion}</td>
+                <td>${item.codigo}</td>
+                <td>${item.stock}</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-warning btn-sm" href="#" role="button">Editar</a>
+                        <a class="btn btn-danger btn-sm" href="#" role="button">Eliminar</a>
+                    </div>
+                </td>
+
+                
             </tr>
         `)
     }

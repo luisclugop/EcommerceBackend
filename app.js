@@ -64,10 +64,6 @@ router.delete("/:id", (request, response) => {
     return response.json(contenedor.delete(id))
 })
 
-// app.listen(8080);
-// app.listen(port);
-// console.log("Corriendo Ecommerce...")
-
 httpServer.listen(port, function() {
     console.log("Corriendo IOServer Proyecto Ecommerce Backend")
 })
