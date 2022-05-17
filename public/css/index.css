@@ -3,10 +3,16 @@ body {
     padding: 0;
     height: auto;
     background-color: aliceblue;
+    background-image: url('../img/backgrounds/double-bubble-outline.png');
 }
 
 a {
     text-decoration: none;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
 }
 
 /* CSS Button */
@@ -95,6 +101,30 @@ a {
 
 /* Tittles Pages */
 
+/* Banner */
+
+.banner {
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 500px;
+    min-height: 300px;
+    background: url('../img/furnitures/background_banner.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .tittleBanner{
+    margin: 20px 0 0 30px;
+}
+
+.banner .tittleBanner .h2Tittle{
+    font-weight: 300;
+}
+
+/* Banner */
+
 /* Intro Section */
 
 .introSection{
@@ -102,7 +132,7 @@ a {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-image: url('../img/backgrounds/double-bubble-outline.png');
+    /* background-image: url('../img/backgrounds/double-bubble-outline.png'); */
 }
 
 .introSection .introSlide{

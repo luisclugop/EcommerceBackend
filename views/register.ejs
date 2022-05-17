@@ -1,0 +1,95 @@
+<%- include ('./partials/menu') %>
+
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Registrarse
+        </h1>
+        <%- include ('./partials/messages') %>
+        <form action="/users/register" method="POST">
+          <div class="form-group">
+            <label for="username">Nombre</label>
+            <input
+              type="username"
+              id="username"
+              name="username"
+              class="form-control"
+              placeholder="Introduce tu nombre"
+              value="<%= typeof username != 'undefined' ? username : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Contraseña"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirmar Contraseña</label>
+            <input
+              type="password2"
+              id="password2"
+              name="password2"
+              class="form-control"
+              placeholder="Confirmar Contraseña"
+              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="direccion">Direccion</label>
+            <input
+              type="direccion"
+              id="direccion"
+              name="direccion"
+              class="form-control"
+              placeholder="Direccion"
+              value="<%= typeof direccion != 'undefined' ? direccion : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input
+              type="edad"
+              id="edad"
+              name="edad"
+              class="form-control"
+              placeholder="Edad"
+              value="<%= typeof edad != 'undefined' ? edad : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input
+              type="telefono"
+              id="telefono"
+              name="telefono"
+              class="form-control"
+              placeholder="Telefono"
+              value="<%= typeof telefono != 'undefined' ? telefono : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Registrarse
+          </button>
+        </form>
+        <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+      </div>
+    </div>
+  </div>
