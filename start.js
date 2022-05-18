@@ -60,6 +60,10 @@ app.use((req, res, next) => {
 app.use('/', require('./routers/index'))
 app.use('/users', require('./routers/users'))
 
+// Mongo
+app.use('/productos', require('./routers/product_router_mongo'))
+// app.use('/api/productMongo', routerProductsMongo)
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

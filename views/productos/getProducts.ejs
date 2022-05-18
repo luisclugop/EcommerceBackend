@@ -1,0 +1,27 @@
+<div class="container-fluid mt-4 text-center">
+    <h1>Productos en Tendencia</h1>
+    <hr>
+    <div class="row mt-4">
+        <% if(objeto) { %>
+            <% objeto.forEach(function(objeto) { %>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                <img src='img/muebles/<%= objeto.foto %>.png' class="img-fluid rounded-start " alt="...">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                <div class="card-body">
+                                    <h4 class="card-title"><%= objeto.nombre %></h4>
+                                    <p class="card-text"><%= objeto.descripcion %></p>
+                                    <span class="card-text">Stock: <b><%= objeto.stock %></b> </span>
+                                    <button class="btn btn-outline-warning">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             <% }); %> 
+        <% } %>
+    </div>
+</div>

@@ -18,12 +18,19 @@ routerProductsMongo.use(express.json())
 routerProductsMongo.use(express.urlencoded({ extended: true }))
 
 // Get all products from Mongo
-
 routerProductsMongo.get('/', async (req, res) => {
     let objeto = await productosDao.getAll()
-
-    return res.send(objeto)
+    // console.log(objeto);
+    res.render('productos', { objeto })
 })
+
+// res.render('register')
+
+// routerProductsMongo.get('/', async (req, res) => {
+//     let objeto = await productosDao.getAll()
+//     console.log(objeto);
+//     return res.send(objeto)
+// })
 
 // Get Product by Params ID on Mongo
 

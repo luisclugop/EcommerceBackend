@@ -52,7 +52,11 @@ class ProductosDaoMongo extends StoreRepoMongo {
                     require: true,
                     max: 100
                 },
-                codigo: Number,
+                codigo: {
+                    type: String, 
+                    require: true,
+                    max: 10
+                },
                 foto: {
                     type: String, 
                     require: true,
